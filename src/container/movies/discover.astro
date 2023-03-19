@@ -1,13 +1,20 @@
 ---
+import Button from "../../components/Button"
 import GetData from "../../components/GetData"
 import GetData2 from "../../components/GetData2"
 
-const url = `${import.meta.env.BASE_URI}/tv/popular?api_key=${import.meta.env.API_KEY}&language=en-US`
-const url2 = 'https://api.themoviedb.org/3/movie/popular?api_key=0535f4259136ecbd61c949c7933a6910&language=en-US'
+let nextPage = 1
+const url = `${import.meta.env.BASE_URI}/discover/movie?api_key=${import.meta.env.API_KEY}&language=en-US&page=2`
+
 
 const response = await fetch(url)
 const data = await response.json()
+
+export async function getStaticPaths({ paginate }){
+    return paginate({pageSize: 5})
+}
 console.log(data)
+
 ---
 
 <html lang="en">
@@ -22,7 +29,9 @@ console.log(data)
 		<h1>Astro</h1>
         <GetData data={data} />
 
-
+        <Button handlePag={() => {
+                nextPage+=1
+        }} name='Next'></Button>
 	
 	</body>
 </html>
