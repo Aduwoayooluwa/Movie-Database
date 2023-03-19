@@ -2,8 +2,8 @@
 import GetData from "../../components/GetData"
 import GetData2 from "../../components/GetData2"
 
-const url = `${import.meta.env.BASE_URI}/tv/popular?api_key=${import.meta.env.API_KEY}&language=en-US`
-const url2 = 'https://api.themoviedb.org/3/movie/popular?api_key=0535f4259136ecbd61c949c7933a6910&language=en-US'
+const url = `${import.meta.env.BASE_URI}/movie/latest?api_key=${import.meta.env.API_KEY}&language=en-US`
+const url2 = 'https://api.themoviedb.org/3/tv/airing_today?api_key=0535f4259136ecbd61c949c7933a6910&language=en-US'
 
 const response = await fetch(url)
 const data = await response.json()
@@ -20,8 +20,8 @@ console.log(data)
 	</head>
 	<body>
 		<h1>Astro</h1>
-        <GetData data={data} />
-
+        <!-- <GetData data={data} /> -->
+        <GetData2 data={data} />
 
 	
 	</body>

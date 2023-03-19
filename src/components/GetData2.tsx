@@ -7,7 +7,9 @@ type Props = {
 const GetData2 = ({data}: Props) => {
   return (
     <div>
+        <p>{data.original_name}</p>
         <p>{JSON.stringify(data)}</p>
+        
     </div>
   )
 }
