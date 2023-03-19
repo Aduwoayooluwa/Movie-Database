@@ -1,9 +1,14 @@
 ---
 import Navigation from "../components/navigation.astro";
+import Latest from "../container/movies/latest.astro";
+import Nowplaying from "../container/movies/nowplaying.astro";
+import Popular from "../container/movies/popular.astro";
+import Toprated from "../container/movies/toprated.astro";
+import Upcoming from "../container/movies/upcoming.astro";
 
-const url =`https://api.themoviedb.org/3/movie/550?api_key=0535f4259136ecbd61c949c7933a6910` || ''
-const response = await fetch(url)
-const data = await response.json()
+// const url =`https://api.themoviedb.org/3/movie/550?api_key=0535f4259136ecbd61c949c7933a6910` || ''
+// const response = await fetch(url)
+// const data = await response.json()
 
 ---
 
@@ -19,17 +24,17 @@ const data = await response.json()
 		
 	</head>
 	<body class="bg-slate-800 text-white">
-		<h1>Astro</h1>
+		<section class="overflow-x-scroll overflow-x py-3 w-full flex items-center justify-evenly">
+			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md ">Top Rated</p>
+			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Now Playing</p>
+			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Upcoming</p>
+			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Popular</p>
+			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Latest</p>
+		</section>
 
-
-		{ data?.production_companies.map((da, index) => {
-			return (
-				<div>
-					{ da.name}
-				</div>
-			)
-		})}
-		
+		<section>
+			<Nowplaying />
+		</section>
 	
 	</body>
 </html>
