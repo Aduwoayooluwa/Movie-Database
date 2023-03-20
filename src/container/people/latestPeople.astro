@@ -2,7 +2,7 @@
 import GetData from "../../components/GetData"
 import GetData2 from "../../components/GetData2"
 
-const url = `${import.meta.env.BASE_URI}/tv/latest?api_key=${import.meta.env.API_KEY}&language=en-US`
+const url = `${import.meta.env.BASE_URI}/person/popular?api_key=${import.meta.env.API_KEY}&language=en-US`
 const url2 = 'https://api.themoviedb.org/3/movie/popular?api_key=0535f4259136ecbd61c949c7933a6910&language=en-US'
 
 const response = await fetch(url)
@@ -18,10 +18,13 @@ console.log(data)
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<p class="font-semibold mt-3 ml-5 text-xl">Top Rated</p>
-        <!-- <GetData data={data} /> -->
-        <GetData2 data={data} />
+	<body class="">
+        <div class="bg-slate-700 pt-4">
+
+		<p class="font-semibold mt-3 ml-4 text-xl">Latest Actors</p>
+        <GetData client:load data={data} />
+        </div>  
+
 
 	
 	</body>

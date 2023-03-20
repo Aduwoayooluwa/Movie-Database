@@ -1,0 +1,31 @@
+---
+import Menubar from "../components/Menubar";
+import Navigation from "../components/navigation.astro";
+import PopularPeople from "../container/people/popularPeople.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<Navigation />
+
+		
+	</head>
+	<body class="bg-slate-800 text-white">
+		
+
+		<section>
+			<Menubar client:load/>
+            <PopularPeople />
+
+		</section>
+		<footer>
+			<p class="font-medium text-center py-3">Built with <a class="underline" href="https://astro.build">astro.build</a> by <a class="underline" href="https://github.com/AduwoAyooluwa">Coding Pastor</a></p>
+	
+		</footer>
+	</body>
+</html>
