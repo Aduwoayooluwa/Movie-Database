@@ -2,15 +2,12 @@
 import GetData from "../../components/GetData"
 import GetData2 from "../../components/GetData2"
 
-const date = new Date()
-
-date.getDay
 const url = `${import.meta.env.BASE_URI}/trending/all/day?api_key=${import.meta.env.API_KEY}&language=en-US`
 
 
 const response = await fetch(url)
 const data = await response.json()
-console.log(data)
+
 ---
 
 <html lang="en">
