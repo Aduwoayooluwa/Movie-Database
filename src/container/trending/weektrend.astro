@@ -2,12 +2,14 @@
 import GetData from "../../components/GetData"
 import GetData2 from "../../components/GetData2"
 
-const url = `${import.meta.env.BASE_URI}/movie/upcoming?api_key=${import.meta.env.API_KEY}&language=en-US`
-const url2 = 'https://api.themoviedb.org/3/movie/popular?api_key=0535f4259136ecbd61c949c7933a6910&language=en-US'
+const date = new Date()
+
+date.getDay
+const url = `${import.meta.env.BASE_URI}/trending/all/week?api_key=${import.meta.env.API_KEY}&language=en-US`
 
 const response = await fetch(url)
 const data = await response.json()
-console.log(data)
+console.log(data) 
 ---
 
 <html lang="en">
@@ -21,9 +23,11 @@ console.log(data)
 	<body class="">
         <div class="bg-slate-700 mt-3 pt-4">
 
-		<p class="font-semibold mt-3 ml-4 text-xl">Upcoming Movies</p>
-        <GetData pageNumber={1} client:load data={data} />
-        </div>  
+		<p class="font-semibold mt-3 ml-4 text-xl">Trending this Week</p>
+        <GetData  pageNumber={1} client:load data={data} />
+        </div> 
+        
+        
 
 
 	

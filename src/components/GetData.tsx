@@ -4,9 +4,10 @@ import 'swiper/css'
 
 type Props = {
     data: any
+    pageNumber: number
 }
 
-const GetData = ({ data }: Props) => {
+const GetData = ({ data, pageNumber }: Props) => {
     return (
         <div className="">
             <Swiper

@@ -1,20 +1,16 @@
 ---
-import Button from "../../components/Button"
 import GetData from "../../components/GetData"
 import GetData2 from "../../components/GetData2"
 
-let nextPage = 1
-const url = `${import.meta.env.BASE_URI}/discover/movie?api_key=${import.meta.env.API_KEY}&language=en-US&page=2`
+const date = new Date()
+
+date.getDay
+const url = `${import.meta.env.BASE_URI}/trending/all/day?api_key=${import.meta.env.API_KEY}&language=en-US`
 
 
 const response = await fetch(url)
 const data = await response.json()
-
-export async function getStaticPaths({ paginate }){
-    return paginate({pageSize: 5})
-}
 console.log(data)
-
 ---
 
 <html lang="en">
@@ -25,12 +21,16 @@ console.log(data)
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<div class="bg-slate-700 mt-3 pt-4">
+	<body class="">
+        <div class="bg-slate-700 mt-3 pt-4">
 
-            <p class="font-semibold mt-3 ml-4 text-xl">Discover</p>
-            <GetData pageNumber={1} client:load data={data} />
-            </div>  
+		<p class="font-semibold mt-3 ml-4 text-xl">Trending today</p>
+        <GetData  pageNumber={1} client:load data={data} />
+        </div> 
+        
+        
+
+
 	
 	</body>
 </html>
