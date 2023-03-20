@@ -11,8 +11,8 @@ const GetDetails2 = ({ data }: Props) => {
 
 
     return (
-        <div className="p-3">
-            <section>
+        <div className="p-3 w-full flex flex-col items-center justify-center">
+            <section className='grid place-items-center'>
             <img className="rounded mt-3" src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path || data.profile_path || data.postal_path}`} alt="images" />
             <p className='my-2 font-semibold text-xl'>{data.original_title}</p>
 
@@ -20,7 +20,7 @@ const GetDetails2 = ({ data }: Props) => {
             <p className='text-sm font-semibold'>Birthday: {data.birthday}</p>
             <p>{data.birthday ? `Death: ${data.deathday}` : ''}</p>
             <p className='text-sm'>Gender: {data.gender === 1 ? 'Female' : 'Male'}</p>
-            
+
             <summary className='my-3'>{data.biography}</summary>
             
             </section>

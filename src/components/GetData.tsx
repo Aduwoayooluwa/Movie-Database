@@ -12,7 +12,8 @@ const GetData = ({ data, category }: Props) => {
 
 
     return (
-        <div className="px-4">
+        <main className='w-full'>
+            <div className="px-4">
             <Swiper
                 spaceBetween={20}
                 slidesPerView={2}
@@ -36,6 +37,8 @@ const GetData = ({ data, category }: Props) => {
             }
             </Swiper>
             </div>
+        </main>
+        
     )
 }
 
