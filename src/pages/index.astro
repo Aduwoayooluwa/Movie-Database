@@ -8,6 +8,7 @@ import Popular from "../container/movies/popular.astro";
 import Toprated from "../container/movies/toprated.astro";
 import Upcoming from "../container/movies/upcoming.astro";
 import PopularPeople from "../container/people/popularPeople.astro";
+import Banner from "../container/trending/Banner.astro";
 import Trending from "../container/trending/trending.astro";
 import Trendingtv from "../container/trending/trendingtv.astro";
 import Weektrend from "../container/trending/weektrend.astro";
@@ -38,7 +39,8 @@ import UpcomingTV from "../container/tv/topratedTv.astro";
 		
 
 		<section class="">
-			<Menubar client:load/>			
+			<Menubar client:load/>		
+			<Banner />	
 			<Discover />
 			<Trending />
 			<Nowplaying />
