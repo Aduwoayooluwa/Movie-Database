@@ -1,4 +1,5 @@
 ---
+import Menubar from "../components/Menubar";
 import Navigation from "../components/navigation.astro";
 import Discover from "../container/movies/discover.astro";
 import Latest from "../container/movies/latest.astro";
@@ -30,16 +31,10 @@ import UpcomingTV from "../container/tv/topratedTv.astro";
 		
 	</head>
 	<body class="bg-slate-800 text-white">
-		<section class="overflow-x-scroll overflow-x py-3 w-full flex items-center justify-evenly">
-			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md ">Top Rated</p>
-			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Now Playing</p>
-			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Upcoming</p>
-			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Popular</p>
-			<p class="p-2 cursor-pointer shadow hover:bg-slate-500 border border-slate-50 rounded-md">Latest</p>
-		</section>
+		
 
 		<section>
-			<Discover />
+			<Menubar client:load/>
 		</section>
 	
 	</body>
