@@ -18,8 +18,11 @@ console.log(data)
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-        <GetData data={data} />
+		<div class="bg-slate-700 mt-3 pt-4">
+
+            <p class="font-semibold mt-3 ml-4 text-xl">Now Playing</p>
+            <GetData client:load data={data} />
+            </div>  
 
 
 	

@@ -17,10 +17,12 @@ console.log(data)
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
-        <GetData data={data} />
+	<body class="">
+		<div class="bg-slate-700 pt-4 my-3">
 
+            <p class="font-semibold mt-3 ml-4 text-xl">Popular</p>
+            <GetData client:load data={data} />
+            </div>  
 	
 	</body>
 </html>
