@@ -7,7 +7,7 @@ const url2 = 'https://api.themoviedb.org/3/movie/popular?api_key=0535f4259136ecb
 
 const response = await fetch(url)
 const data = await response.json()
-console.log(data)
+
 ---
 
 <html lang="en">
@@ -22,7 +22,7 @@ console.log(data)
 		
         <div>
         <p class="font-semibold mt-3 ml-4 text-xl">Popular Tv</p>
-            <GetData pageNumber={1} client:load data={data} />
+            <GetData category={'movie'} client:load data={data} />
         </div> 
 
 

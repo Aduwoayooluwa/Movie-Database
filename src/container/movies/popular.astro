@@ -6,7 +6,7 @@ const url = `${import.meta.env.BASE_URI}/movie/popular?api_key=${import.meta.env
 
 const response = await fetch(url)
 const data = await response.json()
-console.log(data)
+
 ---
 
 <html lang="en">
@@ -21,7 +21,7 @@ console.log(data)
 		<div class="bg-slate-700 pt-4 my-3">
 
             <p class="font-semibold mt-3 ml-4 text-xl">Popular</p>
-            <GetData pageNumber={1} client:load data={data} />
+            <GetData category={'movie'} client:load data={data} />
             </div>  
 	
 	</body>

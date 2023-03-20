@@ -13,7 +13,7 @@ const data = await response.json()
 export async function getStaticPaths({ paginate }){
     return paginate({pageSize: 5})
 }
-console.log(data)
+
 
 ---
 
@@ -29,7 +29,7 @@ console.log(data)
 		<div class="bg-slate-700 mt-3 pt-4">
 
             <p class="font-semibold mt-3 ml-4 text-xl">Discover</p>
-            <GetData pageNumber={1} client:load data={data} />
+            <GetData category={'movie'} client:load data={data} />
             </div>  
 	
 	</body>

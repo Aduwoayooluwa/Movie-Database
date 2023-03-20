@@ -1,14 +1,12 @@
 ---
 import GetData from "../../components/GetData"
-import GetData2 from "../../components/GetData2"
-
 
 
 const url = `${import.meta.env.BASE_URI}/trending/all/week?api_key=${import.meta.env.API_KEY}&language=en-US`
 
 const response = await fetch(url)
 const data = await response.json()
-console.log(data) 
+
 ---
 
 <html lang="en">
@@ -23,7 +21,7 @@ console.log(data)
         <div class="bg-slate-700 mt-3 pt-4">
 
 		<p class="font-semibold mt-3 ml-4 text-xl">Trending this Week</p>
-        <GetData  pageNumber={1} client:load data={data} />
+        <GetData category={'movie'} client:load data={data} />
         </div> 
         
         
