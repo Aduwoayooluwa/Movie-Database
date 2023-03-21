@@ -38,7 +38,7 @@ const GetDetails = ({ data }: Props) => {
                 data.production_companies.map((item, index: number) => {
                     return (
                         <div key={index} className='border py-2 px-4 hover:bg-slate-600 rounded w-full'>
-                            <p className='text-xs'>{item.name}</p>
+                            <p className='text-xs truncate'>{item.name}</p>
                         </div>
                     )
                 })
@@ -54,7 +54,7 @@ const GetDetails = ({ data }: Props) => {
                 data.production_countries.map((item, index: number) => {
                     return (
                         <div key={index} className='border py-2 px-4 hover:bg-slate-600 rounded w-fit'>
-                            <p className='text-xs'>{item.name}</p>
+                            <p className='text-xs truncate'>{item.name}</p>
                         </div>
                     )
                 })

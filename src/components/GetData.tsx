@@ -21,9 +21,9 @@ const GetData = ({ data, category }: Props) => {
                 {
             data?.results.map((item, index) => {
                 return (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={index} className='shadow rounded-md'>
                         <a href={`${category}/${item.id}`}>
-                            <div  className='my-4 p-2'>
+                            <div  className='my-4 p-2 '>
                                 <img className="rounded" src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path || item.profile_path || item.postal_path}`} alt="images" />
                                 <p className="border mt-2 border-slate-50 rounded-md hover:bg-slate-500 w-fit p-1 text-xs">Date: {item.release_date}</p>
                                 <p className='font-semibold text-lg my-2'>{item.title || item.original_name || item.name}</p>
