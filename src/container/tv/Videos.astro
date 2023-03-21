@@ -1,8 +1,9 @@
 ---
 import GetData from "../../components/GetData"
-import GetData2 from "../../components/GetData2"
+import Video from "../../components/Video"
 
-const url = `${import.meta.env.BASE_URI}/trending/tv/day?api_key=${import.meta.env.API_KEY}&language=en-US`
+const tv_title = Astro.params.title
+const url = `${import.meta.env.BASE_URI}/tv/${tv_title}/videos?api_key=${import.meta.env.API_KEY}&language=en-US`
 
 
 const response = await fetch(url)
@@ -19,15 +20,11 @@ const data = await response.json()
 		<title>Astro</title>
 	</head>
 	<body class="">
-        <div class="bg-slate-700 mt-3 pt-4">
+		<div class="bg-slate-700 pt-4 my-3">
 
-		<p class="font-semibold mt-3 ml-4 text-xl">Trending TV Program</p>
-        <GetData  category={'tv'} client:load data={data} />
-        </div> 
-        
-        
-
-
+            <p class="font-semibold mt-3 ml-4 text-xl">Videos</p>
+            <Video client:load data={data} category={'tv'} />
+            </div>  
 	
 	</body>
 </html>

@@ -2,6 +2,9 @@
 import Navigation from "../../components/navigation.astro";
 import Menubar from "../../components/Menubar";
 import GetDetails from "../../components/GetDetails";
+import Similar from "../../container/movies/similar.astro";
+import Videos from "../../container/movies/Videos.astro";
+import Recommendations from "../../container/movies/recommendations.astro";
 
 const movie_id = Astro.params.title
 console.log(movie_id)
@@ -29,7 +32,9 @@ console.log(data)
 		<section>
 			<Menubar client:load/>
 			<GetDetails client:load data={data} />
-
+			<Videos />
+			<Similar />
+			<Recommendations />
 		</section>
 		<footer>
 			<p class="font-medium text-center py-3">Built with <a class="underline" href="https://astro.build">astro.build</a> by <a class="underline" href="https://github.com/AduwoAyooluwa">Coding Pastor</a></p>

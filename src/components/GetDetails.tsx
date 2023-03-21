@@ -11,14 +11,14 @@ const GetDetails = ({ data }: Props) => {
 
 
     return (
-        <div className="w-full flex flex-col items-center justify-center">
+        <div className="p-3 w-full flex flex-col items-center justify-center">
             {/* { JSON.stringify(data) } */}
             <section className='w-full grid place-items-center'>
             <img className="rounded mt-3" src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path || data.profile_path || data.postal_path}`} alt="images" />
             <p className="border mt-2 border-slate-50 rounded-md hover:bg-slate-500 w-fit p-1 text-xs">Released on: {data.release_date}</p>
             <p className='my-2 font-semibold text-xl'>{data.original_title}</p>
 
-            <summary className='my-3 w-full md:w-1/3'>{data.overview}</summary>
+            <summary className='text-justify my-3 w-full md:w-1/3'>{data.overview}</summary>
             <div className='flex items-center'>
                 {
                 data.genres.map((item, index: number) => {

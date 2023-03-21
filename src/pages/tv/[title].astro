@@ -3,6 +3,9 @@ import Navigation from "../../components/navigation.astro";
 import Menubar from "../../components/Menubar";
 import GetDetails from "../../components/GetDetails";
 import GetDetails2 from "../../components/GetDetails2";
+import Videos from "../../container/tv/Videos.astro";
+import Similar from "../../container/tv/similar.astro";
+import Recommendations from "../../container/tv/recommendations.astro";
 
 const movie_id = Astro.params.title
 console.log(movie_id)
@@ -30,6 +33,9 @@ console.log(data)
 		<section>
 			<Menubar client:load/>
 			<GetDetails client:load data={data} />
+			<Videos />
+			<Similar />
+			<Recommendations />
 
 		</section>
 		<footer>
