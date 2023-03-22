@@ -11,7 +11,7 @@ const GetDetails = ({ data }: Props) => {
 
 
     return (
-        <div className="p-3 dark:bg-slate-700 bg-slate-100 w-full flex flex-col items-center justify-center">
+        <div className="p-3 font-poppins dark:bg-slate-700 bg-slate-100 w-full flex flex-col items-center justify-center">
             {/* { JSON.stringify(data) } */}
             <section className='w-full grid place-items-center'>
             <img loading='lazy' className="rounded mt-3" src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path || data.profile_path || data.postal_path}`} alt="images" />

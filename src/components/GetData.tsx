@@ -12,7 +12,7 @@ const GetData = ({ data, category }: Props) => {
 
 
     return (
-        <main className='w-full dark:bg-slate-700 bg-slate-100'>
+        <main className='w-full font-poppins dark:bg-slate-700 bg-slate-100'>
             <div className="px-4">
             <Swiper
                 spaceBetween={20}
