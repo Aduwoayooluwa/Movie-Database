@@ -4,6 +4,8 @@ import Menubar from "../../components/Menubar";
 import GetDetails from "../../components/GetDetails";
 import GetDetails2 from "../../components/GetDetails2";
 import Video from "../../components/Video";
+import MoveCredits from "../../container/people/moveCredits.astro";
+import Images from "../../container/people/images.astro";
 
 const movie_id = Astro.params.title
 const url = `${import.meta.env.BASE_URI}/person/${movie_id}?api_key=${import.meta.env.API_KEY}&language=en-US`
@@ -28,9 +30,9 @@ const data = await response.json()
 		
 
 		<section>
-			<Menubar client:load/>
 			<GetDetails2 client:load data={data} />
-
+			<MoveCredits />
+			<Images />
 		</section>
 		<footer>
 			<p class="font-medium font-poppins text-center py-3">Built with <a class="underline" href="https://astro.build">astro.build</a> by <a class="underline" href="https://github.com/AduwoAyooluwa">Coding Pastor</a></p>

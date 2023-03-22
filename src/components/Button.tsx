@@ -12,7 +12,6 @@ const Button = ({name}: Props) => {
   return (
     <button onClick={() => {
       defTheme()
-      console.log(defTheme)
     }} className="p-2 text-white bg-red-200">{name}</button>
   )
 }
