@@ -1,5 +1,4 @@
 ---
-import Menubar from "../components/Menubar";
 import Navigation from "../components/navigation.astro";
 import Discover from "../container/movies/discover.astro";
 import Latest from "../container/movies/latest.astro";
@@ -19,6 +18,7 @@ import TopratedTv from "../container/tv/topratedTv.astro";
 import UpcomingTV from "../container/tv/topratedTv.astro";
 import { initialV, themeColor } from "../stores/menu";
 import Button from "../components/Button";
+import { isDefaultTheme } from "../stores/theme";
 ---
 
 <html lang="en">
@@ -32,12 +32,11 @@ import Button from "../components/Button";
 
 		
 	</head>
-	<body class={`${initialV.theme === 'dark' ? 'bg-slate-800' : 'bg-slate-200'} text-white`}>
+	<body class={`${isDefaultTheme.get() ? 'bg-slate-800' : 'bg-slate-200'} text-white`}>
 		
 
-		<section class="">
-			<Menubar client:load/>		
-			<Button name={'Change Theme'}>Change Theme</Button>
+		<section class="">	
+			<Button client:load name={'Change Theme'}>Change Theme</Button>
 			<Banner />	
 			<Discover />
 			<Trending />

@@ -1,5 +1,4 @@
 ---
-import Menubar from "../components/Menubar";
 import Navigation from "../components/navigation.astro";
 import Discover from "../container/movies/discover.astro";
 import DiscoverMore from "../container/movies/discoverMore.astro";
@@ -31,9 +30,7 @@ import UpcomingTV from "../container/tv/topratedTv.astro";
 	<body class="bg-slate-800 text-white">
 		
 
-		<section>
-			<Menubar client:load/>
-			
+		<section>			
 			<Popular />
 			<Nowplaying />
 			<Toprated />

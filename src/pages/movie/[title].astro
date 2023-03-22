@@ -1,6 +1,5 @@
 ---
 import Navigation from "../../components/navigation.astro";
-import Menubar from "../../components/Menubar";
 import GetDetails from "../../components/GetDetails";
 import Similar from "../../container/movies/similar.astro";
 import Videos from "../../container/movies/Videos.astro";
@@ -30,7 +29,6 @@ const data = await response.json()
 		
 
 		<section>
-			<Menubar client:load/>
 			<GetDetails client:load data={data} />
 			<Videos />
 			<Similar />
