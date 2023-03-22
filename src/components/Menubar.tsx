@@ -10,7 +10,7 @@ type Props = {}
 
 const Menubar = (props: Props) => {    
     return (
-        <div className='dark:bg-slate-900 py-2  bg-slate-200'>
+        <div className='dark:bg-slate-900 py-2  bg-slate-300'>
             <Swiper
             slidesPerView={3}
             spaceBetween={20}

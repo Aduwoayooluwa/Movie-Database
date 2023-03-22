@@ -1,18 +1,13 @@
 ---
 import Menubar from "./Menubar";
 import Search from "./Search";
-
+import ThemeToggle from "./ThemeToggle";
 ---
 
-<html lang="en">
-	<body>
-		<nav class="w-full bg-slate-900 h-[50px] py-5">
-				<p class="font-semibold text-white text-center">TMDB With Astro.build</p>
-		</nav>
-		<div class="mx-3 py-2">
-			<!-- / -->
-			<Menubar client:load />
-		</div>
-		
-	</body>
-</html>
+		<nav class="w-full dark:bg-slate-900 px-3 bg-slate-300 h-fit py-5">
+				<p class="font-semibold dark:text-white text-dark text-center">TMDB With Astro.build</p>
+				<div class="">
+					<Menubar client:load />
+				</div>
+				<p class="text-sm">Change Theme: <ThemeToggle client:load/></p>
+			</nav>
