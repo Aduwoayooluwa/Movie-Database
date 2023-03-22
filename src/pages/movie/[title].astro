@@ -7,12 +7,12 @@ import Videos from "../../container/movies/Videos.astro";
 import Recommendations from "../../container/movies/recommendations.astro";
 
 const movie_id = Astro.params.title
-console.log(movie_id)
+
 const url = `${import.meta.env.BASE_URI}/movie/${movie_id}?api_key=${import.meta.env.API_KEY}&language=en-US`
-console.log(url)
+
 const response =  await fetch(url)
 const data = await response.json()
-console.log(data)
+
 ---
 
 <html lang="en">

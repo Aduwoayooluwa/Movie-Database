@@ -1,8 +1,7 @@
 ---
-import GetData from "../../components/GetData"
+import GetSearchDetails from "../components/GetSearchDetails"
 
-const tv_id = Astro.params.title
-const url = `${import.meta.env.BASE_URI}/tv/${tv_id}/recommendations?api_key=${import.meta.env.API_KEY}&language=en-US`
+const url = `${import.meta.env.BASE_URI}/search/keyword/similar?api_key=${import.meta.env.API_KEY}&language=en-US`
 
 
 const response = await fetch(url)
@@ -21,8 +20,8 @@ const data = await response.json()
 	<body class="">
 		<div class="bg-slate-700 pt-4 my-3">
 
-            <p class="font-semibold mt-3 ml-4 text-xl">Reccommendations</p>
-            <GetData category={'tv'} client:load data={data} />
+            <p class="font-semibold mt-3 ml-4 text-xl">Similar Movies</p>
+            <GetSearchDetails client:load />
             </div>  
 	
 	</body>

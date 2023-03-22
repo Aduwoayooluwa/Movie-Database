@@ -1,13 +1,13 @@
 import React from 'react'
+import { themeColor } from '../stores/menu'
 
 type Props = {
     name: string,
-    handlePag: any
 }
 
-const Button = ({name, handlePag}: Props) => {
+const Button = ({name}: Props) => {
   return (
-    <button onClick={handlePag} className="p-2 text-white bg-transparent">{name}</button>
+    <button onClick={themeColor} className="p-2 text-white bg-transparent">{name}</button>
   )
 }
 

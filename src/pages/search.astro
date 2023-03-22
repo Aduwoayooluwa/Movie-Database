@@ -1,16 +1,5 @@
 ---
-import Navigation from "../../components/navigation.astro";
-import Menubar from "../../components/Menubar";
-import GetDetails from "../../components/GetDetails";
-import GetDetails2 from "../../components/GetDetails2";
-import Video from "../../components/Video";
-
-const movie_id = Astro.params.title
-const url = `${import.meta.env.BASE_URI}/person/${movie_id}?api_key=${import.meta.env.API_KEY}&language=en-US`
-
-const response =  await fetch(url)
-const data = await response.json()
-
+import Navigation from "../components/navigation.astro";
 ---
 
 <html lang="en">
@@ -28,8 +17,7 @@ const data = await response.json()
 		
 
 		<section>
-			<Menubar client:load/>
-			<GetDetails2 client:load data={data} />
+			
 
 		</section>
 		<footer>

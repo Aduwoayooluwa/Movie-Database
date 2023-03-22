@@ -13,7 +13,7 @@ const GetDetails2 = ({ data }: Props) => {
     return (
         <div className="p-3 w-full flex flex-col items-center justify-center">
             <section className='grid place-items-center'>
-            <img className="rounded mt-3" src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path || data.profile_path || data.postal_path}`} alt="images" />
+            <img loading='lazy' className="rounded mt-3" src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path || data.profile_path || data.postal_path}`} alt="images" />
             <p className='my-2 font-semibold text-xl'>{data.original_title}</p>
 
             <p className='font-medium'>Place Of Birth: {data.place_of_birth}</p>

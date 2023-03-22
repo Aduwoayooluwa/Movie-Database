@@ -1,11 +1,10 @@
 import { atom } from 'nanostores';
-// import Upcoming from '../container/movies/upcoming.astro';
-// import Toprated from '../container/movies/toprated.astro';
+
 const initialV = {
-    render: '(<Upcoming />)'
+    theme: 'dark'
 }
 const render = atom(initialV)
 
-const renderTopRated = () => render.set({ render:  '(<Toprated />) '})
+const themeColor = () => render.set({ theme: 'light' })
 
-export { initialV, renderTopRated}
+export { initialV, themeColor}

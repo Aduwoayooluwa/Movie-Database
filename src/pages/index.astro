@@ -17,8 +17,8 @@ import LatestTv from "../container/tv/latestTv.astro";
 import PopularTv from "../container/tv/popularTv.astro";
 import TopratedTv from "../container/tv/topratedTv.astro";
 import UpcomingTV from "../container/tv/topratedTv.astro";
-
-
+import { initialV, themeColor } from "../stores/menu";
+import Button from "../components/Button";
 ---
 
 <html lang="en">
@@ -32,11 +32,12 @@ import UpcomingTV from "../container/tv/topratedTv.astro";
 
 		
 	</head>
-	<body class="bg-slate-800 text-white">
+	<body class={`${initialV.theme === 'dark' ? 'bg-slate-800' : 'bg-slate-200'} text-white`}>
 		
 
 		<section class="">
 			<Menubar client:load/>		
+			<Button name={'Change Theme'}>Change Theme</Button>
 			<Banner />	
 			<Discover />
 			<Trending />
