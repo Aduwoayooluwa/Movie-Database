@@ -1,5 +1,6 @@
 ---
 import GetData from "../../components/GetData"
+import GetOtherData from "../../components/GetOItherData"
 
 const movie_id = Astro.params.title
 const url = `${import.meta.env.BASE_URI}/movie/${movie_id}/recommendations?api_key=${import.meta.env.API_KEY}&language=en-US`
@@ -22,7 +23,7 @@ const data = await response.json()
 		<div class=" pt-4 my-3">
 
             <p class="font-semibold mt-3 ml-4 text-xl">Reccommendations</p>
-            <GetData category={'movie'} client:load data={data} />
+            <GetOtherData client:load data={data} />
             </div>  
 	
 	</body>

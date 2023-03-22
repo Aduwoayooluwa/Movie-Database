@@ -1,5 +1,6 @@
 ---
 import GetData from "../../components/GetData"
+import GetOtherData from "../../components/GetOItherData"
 
 const tv_title = Astro.params.title
 const url = `${import.meta.env.BASE_URI}/tv/${tv_title}/similar?api_key=${import.meta.env.API_KEY}&language=en-US`
@@ -22,7 +23,7 @@ const data = await response.json()
 		<div class="pt-4 my-3">
 
             <p class="font-semibold mt-3 ml-4 text-xl">Similar Movies</p>
-            <GetData category={'tv'} client:load data={data} />
+            <GetOtherData client:load data={data} />
             </div>  
 	
 	</body>
