@@ -9,7 +9,7 @@ type Props = {
 
 const Video = ({data, category}: Props) => {
     return (
-        <div>
+        <div className='dark:bg-slate-700 bg-slate-100'>
             <Swiper
                 spaceBetween={20}
                 slidesPerView={2}

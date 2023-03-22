@@ -20,7 +20,7 @@ const data = await response.json()
 		<title>Astro</title>
 	</head>
 	<body class="">
-		<div class="bg-slate-700 pt-4 my-3">
+		<div class="pt-4 my-3">
 
             <p class="font-semibold mt-3 ml-4 text-xl">Videos</p>
             <Video client:load data={data} category={'movie'} />

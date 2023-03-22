@@ -18,7 +18,7 @@ const data = await response.json()
 		<title>Astro</title>
 	</head>
 	<body >
-        <div class="bg-slate-600">
+        <div class="">
             <p class="font-semibold mt-3 ml-5 text-xl">Top Rated</p>
             <!-- <GetData data={data} /> -->
             <GetData category={'movie'} client:load data={data} />
