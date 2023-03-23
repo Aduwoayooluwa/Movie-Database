@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Movie DB with Astro and React
 
 ```
 npm create astro@latest -- --template minimal
