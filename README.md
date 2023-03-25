@@ -1,4 +1,4 @@
-# Movie DB with Astro and React
+# Movie DB with Astro BUILD and React
 
 ```
 npm create astro@latest -- --template minimal
